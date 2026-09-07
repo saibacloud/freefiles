@@ -21,7 +21,6 @@ echo '. ~/.freefilesrc' >> ~/.profile
 |---|---|---|
 | Price | $0 | **$5.99 / month** |
 | Files | 1 | more than 1 |
-| Tab completion | a message | a completion |
 | Ads | every shell | nah brah |
 
 ## Upgrade
