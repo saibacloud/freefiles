@@ -5,15 +5,16 @@ here u go
 ## Install
 
 ```sh
+copy it below
+```
 cp .freefilesrc ~/.freefilesrc
 echo '. ~/.freefilesrc' >> ~/.profile
-```
 
 ## What you get
 
- `cat`
-- `ll`, which shows the first 2 files in a folder
-- a whole lot less compared to premium bruz
+`cat`
+`ll`
+a whole lot less compared to premium bruz
 
 ## Plans
 
@@ -21,12 +22,10 @@ echo '. ~/.freefilesrc' >> ~/.profile
 |---|---|---|
 | Price | $0 | **$5.99 / month** |
 | Files | 1 | more than 1 |
-| Ads | every shell | nah brah |
+| Ads | idk try it find out | nah brah |
 
 ## Upgrade
 
 Premium Dotfiles costs $5.99 per month. Cancel any time. Cancelling is $5.99.
 
-```sh
-echo "5.99" | mail -s "take it" billing@freefiles.dinugs
-```
+###support@bingus.freefilesyo
