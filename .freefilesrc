@@ -1,41 +1,21 @@
 #!/bin/sh
 # its free what else do you want
-
-#
-# Source it:  . ~/.freefilesrc
-
 FREEFILES_VERSION="0.1.0-free"
 FREEFILES_PRICE_TO_STOP_THIS="5.99"
-
-# Free tier gets one editor. It reads. Writing is a paid feature.
 export EDITOR="cat"
-
-# Free tier gets one color. It is the color your terminal already was.
 export TERM="${TERM:-dumb}"
 
-# Free tier ships one alias. We picked it for you.
-please() { echo "Politeness is available on Premium."; }
 
-# ls, but only the first three results. The rest are behind the paywall.
+# ls, but results are hidden behind premium
 ll() {
-    command ls -1 "$@" | head -n 3
+    command ls -1 "$@" | head -n 2
     _hidden=$(command ls -1 "$@" | tail -n +4 | wc -l | tr -d ' ')
     [ "$_hidden" -gt 0 ] && echo "... and $_hidden more files. Upgrade to see them."
     unset _hidden
 }
 
-# cd, free tier. One level per call. Deep paths are a Premium journey.
-cdd() {
-    case "$1" in
-        */*) echo "Multi-level cd is Premium. Go one folder at a time like the rest of us." ;;
-        *)   cd "$1" || return 1 ;;
-    esac
-}
-
-# The prompt. It is a dollar sign. It is right there in the name of the product.
 PS1='$ '
 
-# Tab completion, free tier.
 freefiles_complete() {
     echo "Did you mean... something? Premium knows. Premium always knows."
 }
@@ -45,23 +25,17 @@ freefiles_ad() {
 
   ------------------------------------------------------------
     You are running freefiles.
-    You have 1 alias, 1 color, and an editor that cannot edit.
 
-    PREMIUM DOTFILES - $5.99 / month
-      - A second alias
-      - Arrow keys
-      - Your prompt, but in a color
-      - The other files in your directory
-      - Tab completion that completes a tab
+    SUBSCRIBE TODAY TO PREMIUM DOTFILES - $5.99 / month - AND YOU GET THE AMAZING FEATURES OF:
+
       - We stop showing you this
 
-    First 30 days: still $5.99. There is no trial. Trials are Premium.
+    First 30 days: still $5.99. There is no trial. Trials are Premium. Cancelling is $5.99 + GST.
 
-    Upgrade:  echo "5.99" | mail -s "take it" billing@freefiles.bork
+    Upgrade:  echo "5.99" | mail -s "do it or else" billing@freefiles.brokebitch
   ------------------------------------------------------------
 
 AD
 }
 
-# Shown on every shell. Turning this off is a Premium feature.
 freefiles_ad
